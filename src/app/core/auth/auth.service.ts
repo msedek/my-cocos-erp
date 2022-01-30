@@ -71,23 +71,19 @@ export class AuthService {
             .post(environment.authUserEndPoint, credentials)
             .pipe(
                 switchMap((response: GenericResponse) => {
-                    if (response.getCode() !== 200) {
-                        return response.getMessage();
+                    if (response.code !== 200) {
+                        return response.message;
                     }
 
-                    const user: User = JSON.parse(response.getMessage());
-
+                    const user: User = JSON.parse(response.message);
                     // Store the access token in the local storage
                     this.accessToken = user.apikey;
 
                     // Set the authenticated flag to true
                     this._authenticated = true;
 
-                    // Store the user on the user service
-                    this._userService.user = user;
-
                     // Return a new observable with the response
-                    return of(response);
+                    return of(user);
                 })
             );
     }

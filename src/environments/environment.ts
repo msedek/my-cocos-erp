@@ -8,6 +8,7 @@ export const environment = {
     devmode: true,
 
     authUserEndPoint: 'http://192.168.1.3:8300/authuser/',
+    getValidUserEndPoint: 'http://192.168.1.3:8300/validuser',
 };
 
 /*
