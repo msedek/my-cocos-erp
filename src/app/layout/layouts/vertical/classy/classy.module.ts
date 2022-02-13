@@ -10,7 +10,6 @@ import { FuseLoadingBarModule } from '@fuse/components/loading-bar';
 import { FuseFullscreenModule } from '@fuse/components/fullscreen/fullscreen.module';
 import { LanguagesModule } from 'app/layout/common/languages/languages.module';
 import { MessagesModule } from 'app/layout/common/messages/messages.module';
-import { NotificationsModule } from 'app/layout/common/notifications/notifications.module';
 import { SearchModule } from 'app/layout/common/search/search.module';
 import { ShortcutsModule } from 'app/layout/common/shortcuts/shortcuts.module';
 import { UserModule } from 'app/layout/common/user/user.module';
@@ -33,7 +32,6 @@ import { ClassyLayoutComponent } from 'app/layout/layouts/vertical/classy/classy
         FuseNavigationModule,
         LanguagesModule,
         MessagesModule,
-        NotificationsModule,
         SearchModule,
         ShortcutsModule,
         UserModule,
