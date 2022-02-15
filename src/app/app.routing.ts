@@ -9,7 +9,7 @@ import { InitialDataResolver } from 'app/app.resolvers';
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 export const appRoutes: Route[] = [
     // Redirect empty path to '/dashboards/project'
-    { path: '', pathMatch: 'full', redirectTo: 'apps/file-manager' },
+    { path: '', pathMatch: 'full', redirectTo: 'dashboards/project' },
 
     // Redirect signed in user to the '/dashboards/project'
     //
@@ -19,7 +19,7 @@ export const appRoutes: Route[] = [
     {
         path: 'signed-in-redirect',
         pathMatch: 'full',
-        redirectTo: 'apps/file-manager',
+        redirectTo: 'dashboards/project',
     },
 
     // Auth routes for guests
@@ -69,7 +69,6 @@ export const appRoutes: Route[] = [
             },
         ],
     },
-
     // Auth routes for authenticated users
     {
         path: '',
@@ -96,7 +95,6 @@ export const appRoutes: Route[] = [
             },
         ],
     },
-
     // Landing routes
     {
         path: '',
@@ -114,7 +112,6 @@ export const appRoutes: Route[] = [
             },
         ],
     },
-
     // Admin routes
     {
         path: '',
@@ -152,7 +149,6 @@ export const appRoutes: Route[] = [
                     },
                 ],
             },
-
             // Apps
             {
                 path: 'apps',
@@ -173,7 +169,6 @@ export const appRoutes: Route[] = [
                     },
                 ],
             },
-
             { path: '**', redirectTo: '404-not-found' },
         ],
     },
