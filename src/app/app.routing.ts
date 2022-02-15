@@ -33,13 +33,6 @@ export const appRoutes: Route[] = [
         },
         children: [
             {
-                path: 'confirmation-required',
-                loadChildren: () =>
-                    import(
-                        'app/modules/auth/confirmation-required/confirmation-required.module'
-                    ).then((m) => m.AuthConfirmationRequiredModule),
-            },
-            {
                 path: 'sign-in',
                 loadChildren: () =>
                     import('app/modules/auth/sign-in/sign-in.module').then(
