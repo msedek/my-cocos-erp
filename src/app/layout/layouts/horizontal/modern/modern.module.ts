@@ -11,7 +11,6 @@ import { FuseNavigationModule } from '@fuse/components/navigation';
 import { MessagesModule } from 'app/layout/common/messages/messages.module';
 import { NotificationsModule } from 'app/layout/common/notifications/notifications.module';
 import { QuickChatModule } from 'app/layout/common/quick-chat/quick-chat.module';
-import { SearchModule } from 'app/layout/common/search/search.module';
 import { UserModule } from 'app/layout/common/user/user.module';
 import { SharedModule } from 'app/shared/shared.module';
 import { ModernLayoutComponent } from 'app/layout/layouts/horizontal/modern/modern.component';
@@ -33,7 +32,6 @@ import { ModernLayoutComponent } from 'app/layout/layouts/horizontal/modern/mode
         MessagesModule,
         NotificationsModule,
         QuickChatModule,
-        SearchModule,
         UserModule,
         SharedModule
     ],
