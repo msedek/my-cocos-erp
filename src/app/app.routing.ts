@@ -46,13 +46,6 @@ export const appRoutes: Route[] = [
                         (m) => m.AuthSignInModule
                     ),
             },
-            {
-                path: 'sign-up',
-                loadChildren: () =>
-                    import('app/modules/auth/sign-up/sign-up.module').then(
-                        (m) => m.AuthSignUpModule
-                    ),
-            },
         ],
     },
     // Auth routes for authenticated users
@@ -71,13 +64,6 @@ export const appRoutes: Route[] = [
                     import('app/modules/auth/sign-out/sign-out.module').then(
                         (m) => m.AuthSignOutModule
                     ),
-            },
-            {
-                path: 'unlock-session',
-                loadChildren: () =>
-                    import(
-                        'app/modules/auth/unlock-session/unlock-session.module'
-                    ).then((m) => m.AuthUnlockSessionModule),
             },
         ],
     },
