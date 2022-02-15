@@ -1,20 +1,19 @@
 import { Injectable } from '@angular/core';
 import { assign, cloneDeep } from 'lodash-es';
 import { FuseMockApiService } from '@fuse/lib/mock-api';
-import { user as userData } from 'app/api/common/user/data';
+import { User } from 'app/core/user/user.types';
+// import { user as userData } from 'app/api/common/user/data';
 
 @Injectable({
-    providedIn: 'root'
+    providedIn: 'root',
 })
-export class UserMockApi
-{
-    private _user: any = userData;
+export class UserMockApi {
+    private _user: User;
 
     /**
      * Constructor
      */
-    constructor(private _fuseMockApiService: FuseMockApiService)
-    {
+    constructor(private _fuseMockApiService: FuseMockApiService) {
         // Register Mock API handlers
         this.registerHandlers();
     }
@@ -26,8 +25,7 @@ export class UserMockApi
     /**
      * Register Mock API handlers
      */
-    registerHandlers(): void
-    {
+    registerHandlers(): void {
         // -----------------------------------------------------------------------------------------------------
         // @ User - GET
         // -----------------------------------------------------------------------------------------------------
@@ -40,8 +38,7 @@ export class UserMockApi
         // -----------------------------------------------------------------------------------------------------
         this._fuseMockApiService
             .onPatch('api/common/user')
-            .reply(({request}) => {
-
+            .reply(({ request }) => {
                 // Get the user mock-api
                 const user = cloneDeep(request.body.user);
 

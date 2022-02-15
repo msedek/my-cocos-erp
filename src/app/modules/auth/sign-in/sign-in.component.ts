@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { fuseAnimations } from '@fuse/animations';
 import { FuseAlertType } from '@fuse/components/alert';
 import { AuthService } from 'app/core/auth/auth.service';
+import { environment } from 'environments/environment';
 
 @Component({
     selector: 'auth-sign-in',
@@ -39,13 +40,17 @@ export class AuthSignInComponent implements OnInit {
      * On init
      */
     ngOnInit(): void {
+        let email: string = '';
+        let password: string = '';
+
+        if (environment.devmode) {
+            email = 'miguelsedek@gmail.com';
+            password = 'qweqwe';
+        }
         // Create the form
         this.signInForm = this._formBuilder.group({
-            email: [
-                'hughes.brian@company.com',
-                [Validators.required, Validators.email],
-            ],
-            password: ['admin', Validators.required],
+            email: [email, [Validators.required, Validators.email]],
+            password: [password, Validators.required],
             rememberMe: [''],
         });
     }

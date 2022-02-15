@@ -4,7 +4,8 @@ import HmacSHA256 from 'crypto-js/hmac-sha256';
 import Utf8 from 'crypto-js/enc-utf8';
 import { cloneDeep } from 'lodash-es';
 import { FuseMockApiService } from '@fuse/lib/mock-api';
-import { user as userData } from 'app/api/common/user/data';
+import { User } from 'app/core/user/user.types';
+
 
 @Injectable({
     providedIn: 'root'
@@ -12,7 +13,7 @@ import { user as userData } from 'app/api/common/user/data';
 export class AuthMockApi
 {
     private readonly _secret: any;
-    private _user: any = userData;
+    private _user: User;
 
     /**
      * Constructor

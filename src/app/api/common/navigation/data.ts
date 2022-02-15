@@ -5,7 +5,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
     {
         id: 'dashboards',
         title: 'Dashboards',
-        subtitle: 'Unique dashboard designs',
+        subtitle: 'mycocos dashboard',
         type: 'group',
         icon: 'heroicons_outline:home',
         children: [
@@ -35,13 +35,13 @@ export const defaultNavigation: FuseNavigationItem[] = [
     {
         id: 'apps',
         title: 'Applications',
-        subtitle: 'Custom made application designs',
+        subtitle: 'mycocos tools',
         type: 'group',
         icon: 'heroicons_outline:home',
         children: [
             {
                 id: 'apps.ecommerce',
-                title: 'ECommerce',
+                title: 'Ecommerce',
                 type: 'collapsable',
                 icon: 'heroicons_outline:shopping-cart',
                 children: [
