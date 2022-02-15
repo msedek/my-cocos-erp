@@ -150,13 +150,6 @@ export const appRoutes: Route[] = [
                                 'app/modules/admin/dashboards/finance/finance.module'
                             ).then((m) => m.FinanceModule),
                     },
-                    {
-                        path: 'crypto',
-                        loadChildren: () =>
-                            import(
-                                'app/modules/admin/dashboards/crypto/crypto.module'
-                            ).then((m) => m.CryptoModule),
-                    },
                 ],
             },
 
@@ -180,149 +173,6 @@ export const appRoutes: Route[] = [
                     },
                 ],
             },
-
-            // Pages
-            {
-                path: 'pages',
-                children: [
-                    // Activities
-                    {
-                        path: 'activities',
-                        loadChildren: () =>
-                            import(
-                                'app/modules/admin/pages/activities/activities.module'
-                            ).then((m) => m.ActivitiesModule),
-                    },
-
-                    // Authentication
-                    {
-                        path: 'authentication',
-                        loadChildren: () =>
-                            import(
-                                'app/modules/admin/pages/authentication/authentication.module'
-                            ).then((m) => m.AuthenticationModule),
-                    },
-
-                    // Coming Soon
-                    {
-                        path: 'coming-soon',
-                        loadChildren: () =>
-                            import(
-                                'app/modules/admin/pages/coming-soon/coming-soon.module'
-                            ).then((m) => m.ComingSoonModule),
-                    },
-
-                    // Error
-                    {
-                        path: 'error',
-                        children: [
-                            {
-                                path: '404',
-                                loadChildren: () =>
-                                    import(
-                                        'app/modules/admin/pages/error/error-404/error-404.module'
-                                    ).then((m) => m.Error404Module),
-                            },
-                            {
-                                path: '500',
-                                loadChildren: () =>
-                                    import(
-                                        'app/modules/admin/pages/error/error-500/error-500.module'
-                                    ).then((m) => m.Error500Module),
-                            },
-                        ],
-                    },
-
-                    // Invoice
-                    {
-                        path: 'invoice',
-                        children: [
-                            {
-                                path: 'printable',
-                                children: [
-                                    {
-                                        path: 'compact',
-                                        loadChildren: () =>
-                                            import(
-                                                'app/modules/admin/pages/invoice/printable/compact/compact.module'
-                                            ).then((m) => m.CompactModule),
-                                    },
-                                    {
-                                        path: 'modern',
-                                        loadChildren: () =>
-                                            import(
-                                                'app/modules/admin/pages/invoice/printable/modern/modern.module'
-                                            ).then((m) => m.ModernModule),
-                                    },
-                                ],
-                            },
-                        ],
-                    },
-
-                    // Maintenance
-                    {
-                        path: 'maintenance',
-                        loadChildren: () =>
-                            import(
-                                'app/modules/admin/pages/maintenance/maintenance.module'
-                            ).then((m) => m.MaintenanceModule),
-                    },
-
-                    // Pricing
-                    {
-                        path: 'pricing',
-                        children: [
-                            {
-                                path: 'modern',
-                                loadChildren: () =>
-                                    import(
-                                        'app/modules/admin/pages/pricing/modern/modern.module'
-                                    ).then((m) => m.PricingModernModule),
-                            },
-                            {
-                                path: 'simple',
-                                loadChildren: () =>
-                                    import(
-                                        'app/modules/admin/pages/pricing/simple/simple.module'
-                                    ).then((m) => m.PricingSimpleModule),
-                            },
-                            {
-                                path: 'single',
-                                loadChildren: () =>
-                                    import(
-                                        'app/modules/admin/pages/pricing/single/single.module'
-                                    ).then((m) => m.PricingSingleModule),
-                            },
-                            {
-                                path: 'table',
-                                loadChildren: () =>
-                                    import(
-                                        'app/modules/admin/pages/pricing/table/table.module'
-                                    ).then((m) => m.PricingTableModule),
-                            },
-                        ],
-                    },
-
-                    // Profile
-                    {
-                        path: 'profile',
-                        loadChildren: () =>
-                            import(
-                                'app/modules/admin/pages/profile/profile.module'
-                            ).then((m) => m.ProfileModule),
-                    },
-
-                    // Settings
-                    {
-                        path: 'settings',
-                        loadChildren: () =>
-                            import(
-                                'app/modules/admin/pages/settings/settings.module'
-                            ).then((m) => m.SettingsModule),
-                    },
-                ],
-            },
-
             // User Interface
             {
                 path: 'ui',
@@ -496,16 +346,6 @@ export const appRoutes: Route[] = [
                             ).then((m) => m.GuidesModule),
                     },
                 ],
-            },
-
-            // 404 & Catch all
-            {
-                path: '404-not-found',
-                pathMatch: 'full',
-                loadChildren: () =>
-                    import(
-                        'app/modules/admin/pages/error/error-404/error-404.module'
-                    ).then((m) => m.Error404Module),
             },
             { path: '**', redirectTo: '404-not-found' },
         ],
