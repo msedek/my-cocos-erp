@@ -10,7 +10,6 @@ import { FuseLoadingBarModule } from '@fuse/components/loading-bar';
 import { FuseFullscreenModule } from '@fuse/components/fullscreen/fullscreen.module';
 import { MessagesModule } from 'app/layout/common/messages/messages.module';
 import { NotificationsModule } from 'app/layout/common/notifications/notifications.module';
-import { QuickChatModule } from 'app/layout/common/quick-chat/quick-chat.module';
 import { UserModule } from 'app/layout/common/user/user.module';
 import { SharedModule } from 'app/shared/shared.module';
 import { ClassyLayoutComponent } from 'app/layout/layouts/vertical/classy/classy.component';
@@ -31,7 +30,6 @@ import { ClassyLayoutComponent } from 'app/layout/layouts/vertical/classy/classy
         FuseNavigationModule,
         MessagesModule,
         NotificationsModule,
-        QuickChatModule,
         UserModule,
         SharedModule
     ],

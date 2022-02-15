@@ -7,11 +7,11 @@ import { MatInputModule } from '@angular/material/input';
 import { FuseDrawerModule } from '@fuse/components/drawer';
 import { FuseScrollbarModule } from '@fuse/directives/scrollbar';
 import { SharedModule } from 'app/shared/shared.module';
-import { QuickChatComponent } from 'app/layout/common/quick-chat/quick-chat.component';
+// import { QuickChatComponent } from 'app/layout/common/quick-chat/quick-chat.component';
 
 @NgModule({
     declarations: [
-        QuickChatComponent
+        // QuickChatComponent
     ],
     imports     : [
         RouterModule,
@@ -24,7 +24,7 @@ import { QuickChatComponent } from 'app/layout/common/quick-chat/quick-chat.comp
         SharedModule
     ],
     exports     : [
-        QuickChatComponent
+        // QuickChatComponent
     ]
 })
 export class QuickChatModule
