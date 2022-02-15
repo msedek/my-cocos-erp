@@ -4,10 +4,10 @@ import { ProjectResolver } from 'app/modules/admin/dashboards/project/project.re
 
 export const projectRoutes: Route[] = [
     {
-        path     : '',
+        path: '',
         component: ProjectComponent,
-        resolve  : {
-            data: ProjectResolver
-        }
-    }
+        resolve: {
+            data: ProjectResolver,
+        },
+    },
 ];
